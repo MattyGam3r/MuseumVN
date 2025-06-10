@@ -1,40 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 21, in script
-    play Fishy Aroma
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script.rpy", line 21, in <module>
-    play Fishy Aroma
-NameError: name 'Aroma' is not defined
+  File "game/script.rpy", line 82, in script
+    show Worker Neutral at left, zoom
+  File "game/script.rpy", line 82, in <module>
+    show Worker Neutral at left, zoom
+NameError: name 'zoom' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 21, in script
-    play Fishy Aroma
-  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1987, in execute
-    self.call("execute")
-  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1966, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 82, in script
+    show Worker Neutral at left, zoom
+  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1083, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
   File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\matth\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 21, in <module>
-    play Fishy Aroma
-NameError: name 'Aroma' is not defined
+  File "game/script.rpy", line 82, in <module>
+    show Worker Neutral at left, zoom
+NameError: name 'zoom' is not defined
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 The Museum 1.0
-Mon May 26 18:18:34 2025
+Tue Jun 10 09:14:02 2025
