@@ -28,3 +28,7 @@ _wfCache
 log.txt 
 errors.txt 
 traceback.txt
+
+TheMuseum-1.0-dists/*
+TheMuseum-1.0-dists
+TheMuseum-1.0-dists/

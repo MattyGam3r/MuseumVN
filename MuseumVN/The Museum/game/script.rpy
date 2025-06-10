@@ -13,7 +13,7 @@ image Battler Confused = "But_b22_komaru2.png"
 image Battler Cry = "But_b22_naku2.png"
 image Battler Laugh = "But_a21_warai1.png"
 
-define w = Character("Museum Worker", color="#5a4313")
+define w = Character("Museum Worker", color="#e7536c")
 image Worker Neutral = "Kan_a11_def1.png"
 image Worker Neutral 2 = "Kan_a11_def2.png"
 image Worker Blinking = "Kan_a11_warai4.png"
@@ -32,10 +32,13 @@ image museum_stairs2 = At("images/bg/IMG_5953.png", center_image)
 image museum_stairs3 = At("images/bg/IMG_5949.png", center_image)
 image museum_lost1 = At("images/bg/IMG_5923.png", center_image)
 image black_bg = At("images/bg/black_bg.jpg", center_image)
+image home = At("images/bg/home.png", center_image)
 
 image museum_dino = At("images/bg/dinosaur.png", center_image)
 
 image museum_squid = At("images/bg/IMG_5941.png", center_image)
+
+image going_home = At("images/bg/going_home.jpg", center_image)
 
 transform double_size:
     zoom 2.0
@@ -274,22 +277,29 @@ label start:
 
     # This ends the game.
     scene black_bg with fade
-    play music "透明な白い日常.mp3" volume 0.15
+    play music "透明な白い日常.mp3" volume 0.09
     "I decided to go back to the entrance of the museum"
     scene museum_entrance with fade
     voice "audio/Recording (31)-cut.mp3"
+    show Worker Neutral at double_size, left
     w "Hello again, how was your visit at the museum today?"
     voice "audio/Recording (32)-cut.mp3"
+    show Battler Laugh at double_size, right
     m "Well, I must say that it was utterly fantastic"
     voice "audio/Recording (33)-cut.mp3"
     m "All of your exhibits were amazing, and it opened up a new path to me that I have never even considered before"
     voice "audio/Recording (34)-cut.mp3"
+    show Battler Smirking Hand
     m "I used to only go to museums just for the triceratops and dinosaurs ever since I was 3"
     voice "audio/Recording (35)-cut.mp3"
+    show Battler Laugh
     m "But I truly have to thank your new system for helping me discover a new passion in other fields."
     voice "audio/Recording (36)-cut.mp3"
+    show Worker Blinking
     w "Why, thank you for the kind words, I'll be sure to let the development team know about how you felt"
 
+
+    show Battler Serious
     voice "audio/Recording (37)-cut.mp3"
     m "I have a question from my side, how is the new system for you?"
     voice "audio/Recording (38)-cut.mp3"
@@ -297,16 +307,20 @@ label start:
     voice "audio/Recording (39)-cut.mp3"
     w "Working at a museum can be overwhelming, but this system helps us to manage the state of this museum so much better"
     voice "audio/Recording (40)-cut.mp3"
+    show Worker Neutral 2
     w "It is also performant, I can't believe sometimes just how fast it is"
     voice "audio/Recording (41)-cut.mp3"
+    show Worker Blinking
     w "It reminds me that we are in the 21st century"
     voice "audio/Recording (42)-cut.mp3"
     m "Wow, this system is truly incredible"
+    show Worker Happy
     voice "audio/Recording (43)-cut.mp3"
     w "One last thing! Our app features a way to view our images using AR, as we have vision capturing techniques here at the moment"
     voice "audio/Recording (44)-cut.mp3"
     w "That way, you can experience the museum anywhere!"
     voice "audio/Recording (45)-cut.mp3"
+    show Battler Laugh
     m "OMG, I am going to try this out tonight then!"
     "I felt so impressed with the system at that point"
     "Are you telling me I can have this amazing experience anywhere?!"
@@ -316,10 +330,10 @@ label start:
     w "Ok! Make sure to leave some feedback and come back again some time"
 
 
-    scene black_bg with fade
+    scene going_home with fade
     play music "ジムノペディ.mp3" volume 0.01
     "And so, I went home"
-    "I opened up the app, and experienced the Giant Squid, magical Aborignal History, and also the Triceratops at home"
+    "I opened up the app, and experienced the Giant Squid, magical Aborignal History which I didn't get to experience, and also the Triceratops at home"
     "I have learnt so much today"
     "This system is truly incredible."
     return
